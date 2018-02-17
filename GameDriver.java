@@ -1,4 +1,4 @@
-/*
+  /*
   Steven Lemos
   CoSci 290
   
@@ -57,40 +57,23 @@ public class GameDriver{
     printWithDelays("\n\n\"Vital signs holding steady...\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
     
-    printWithDelays("\n\n\"Initializing audio user interface...\"", TimeUnit.MILLISECONDS, 75);
+    printWithDelays("\n\n\"Initializing user interface...\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(3000);
     
-    System.out.println("\n\nYou hear a crackling noise and a computerized voice speaks \n");
+    System.out.print("\n\nYou hear a crackling noise and a computerized voice speaks \n");
     Thread.sleep(5000);
     
-    System.out.print("\"Good");
-    Thread.sleep(750);
-    System.out.print(" morning");
-    Thread.sleep(750);
-    System.out.print(" and");
-    Thread.sleep(750);
-    System.out.print(" congradulations");
-    Thread.sleep(750);
-    System.out.print(" on");
-    Thread.sleep(750);
-    System.out.print(" sucessfully");
-    Thread.sleep(750);
-    System.out.print(" using");
-    Thread.sleep(750);
-    System.out.print(" Life");
-    Thread.sleep(750);
-    System.out.print("-o-");
-    Thread.sleep(750);
-    System.out.print("Matic's");
-    Thread.sleep(750);
-    System.out.print(" Bio-");
-    Thread.sleep(750);
-    System.out.print("Pod");
-    Thread.sleep(750);
-    System.out.print(" Hibernation");
-    Thread.sleep(750);
-    System.out.print(" System\"");
-    Thread.sleep(2000);
+    printWithDelays("\n\"Good morning and congradutlations!\"", TimeUnit.MILLISECONDS, 75);
+    Thread.sleep(1500);
+    
+    printWithDelays("\n\n\"You have been successfully revived!\"", TimeUnit.MILLISECONDS, 75);
+    Thread.sleep(1500);
+    
+    printWithDelays("\n\n\"Thank you for using Life-o-Matic Bio-Pod Hibernation System\"", TimeUnit.MILLISECONDS, 75);
+    Thread.sleep(1500);
+    
+    printWithDelays("\n\n\"You have been in suspended animation for ", TimeUnit.MILLISECONDS, 75);
+    Thread.sleep(1500);
     
     System.out.print("\n\n\"You");
     Thread.sleep(750);
@@ -210,6 +193,24 @@ public class GameDriver{
     
     city = input.next();
     
+    System.out.print("\n\n\"No");
+    Thread.sleep(750);
+    System.out.print(" kidding,");
+    Thread.sleep(750);
+    System.out.print(" my");
+    Thread.sleep(750);
+    System.out.print(" programmer");
+    Thread.sleep(750);
+    System.out.print(" is");
+    Thread.sleep(750);
+    System.out.print(" from ");
+    Thread.sleep(750);
+    System.out.print(city);
+    Thread.sleep(750);
+    System.out.print("\"");
+    Thread.sleep(750);
+    System.out.print(" ");
+    Thread.sleep(750);
     System.out.println("\n\"No kidding, my programmer is from " + city + "\"");
 
     System.out.println("\n\"Now, how old are you?\"");
