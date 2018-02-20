@@ -20,6 +20,8 @@ public class GameDriver{
     String name = "Bob";
     String city = "Nowhere";
     int age = 0;
+    int doorOdds = 0;
+  
     
     Scanner input = new Scanner(System.in);
     
@@ -98,7 +100,7 @@ public class GameDriver{
     printWithDelays("\n\n\"You may have experienced some 'slight' brain damage during the emergency revival cycle...\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
    
-    printWithDelays("\n\n\"Please ansewr a few questions to determine cerebral functionality\"", TimeUnit.MILLISECONDS, 75);
+    printWithDelays("\n\n\"Please answer a few questions to determine cerebral functionality\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
     
     printWithDelays("\n\n\"What is your first name?\"\n\n", TimeUnit.MILLISECONDS, 75);
@@ -130,7 +132,7 @@ public class GameDriver{
     printWithDelays("\n\n\"Brain function assessment complete\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
     
-    printWithDelays("\n\n\"Good work! You have incurred legaly acceptabe low levels of brain damage\"", TimeUnit.MILLISECONDS, 75);
+    printWithDelays("\n\n\"Good news! You have incurred legaly acceptabe low levels of brain damage\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
     
     printWithDelays("\n\n\"The Bio-Pod will now open and you will be free to move about the ship\"", TimeUnit.MILLISECONDS, 75);
@@ -156,7 +158,7 @@ public class GameDriver{
     System.out.println("The room shakes violently and you fall to the floor just as the lights go out and room is plunged into darkness.");
     Thread.sleep(7000);
     
-    System.out.println("The shaking stops and the room is quite...the lights flicker on and off.");
+    System.out.println("The shaking stops and the room is quiet...the lights flicker on and off.");
     Thread.sleep(7000);
     
     System.out.println("Pulsing red lights turn on over a door you hadn't noticed before and synthesized voice begins speaking.");
@@ -168,7 +170,7 @@ public class GameDriver{
     printWithDelays("\n\n\"Please proceed to the nearest emergency escape pod\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
     
-    printWithDelays("\n\n\"The \"Starship Lusitania\" has been stuck by a cometary debris\"", TimeUnit.MILLISECONDS, 75);
+    printWithDelays("\n\n\"The 'Starship Lusitania' has been stuck by cometary debris\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
     
     printWithDelays("\n\n\"Shields, engines and main power are offline\"", TimeUnit.MILLISECONDS, 75);
@@ -180,21 +182,56 @@ public class GameDriver{
     printWithDelays("\n\n\"Hull breaches detected on levels 14, 15, 16 and 20\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
     
-    System.out.println("\n\nThe voice suddenly cuts out and is replaced static.");
+    System.out.println("\n\nThe voice suddenly cuts out and is replaced by static.");
     Thread.sleep(7000);
     
-    System.out.println("The door with the red light above it slides slowly open.");
+    System.out.println("The door with the red lights above it slides slowly open.");
     Thread.sleep(7000);
     
-    System.out.println("You step through the door into a hallway.");
+    System.out.println("You pick yourself up from the floor, step throught the door and into a hallway.");
     Thread.sleep(7000); 
     
-    System.out.println("\n\nThe voice suddenly cuts out and is replaced static.");
+    System.out.println("The hallway is lit by dim orange lighting.");
     Thread.sleep(7000);
     
-    System.out.println("Overly large letters on the wall read 'Level 20 Passanger Corridor.");
+    System.out.println("Overly large letters on the wall read 'Level 20--Passenger Corridor'.");
     Thread.sleep(7000);
-                                             
+    
+    System.out.println("At the far end of the hallway is a door with the words 'Emergency Exit' glowing on it.");
+    Thread.sleep(7000);
+    
+    System.out.println("As you walk towards the emergency exit door year hear more explosions and the hallway shakes and shutters.");
+    Thread.sleep(7000);
+    
+    System.out.println("You begin running and reach the door.");
+    Thread.sleep(7000);
+    
+    doorOdds = (1 + (int)(Math.random() * 10));
+    
+    if(doorOdds < 2){
+      System.out.println("The door does not open.");
+      Thread.sleep(4000);
+      System.out.println("There is no handle, or knob, or panel you can see...just the seemingly locked door.");
+      Thread.sleep(5000);
+      System.out.println("You try hitting the door, then kicking the door.");
+      Thread.sleep(5000);
+      System.out.println("You try to push it and slide it to one side..then the other.");
+      Thread.sleep(5000);        
+      System.out.println("You try again and again, but the door simply remains closed.");
+      Thread.sleep(5000);
+      System.out.println("You scream and shout and curse at the door...but it does not open.");
+      Thread.sleep(5000);
+      System.out.println("You hear more explosions and the hallway shakes so hard you are thrown to the floor.");
+      Thread.sleep(7000);
+      System.out.println("You hear the loudest explosion yet, then suddenly you hear nothing at all.");
+      Thread.sleep(5000);
+      System.out.println("You hallway has been ripped in half and you have been sucked into the vacum of space.");
+      Thread.sleep(3000);
+      System.out.println("End");  
+    }
+     else{
+       System.out.println("The door opens.");
+     }                                        
   }
 public static void printWithDelays(String data, TimeUnit unit, long delay)
         throws InterruptedException {
