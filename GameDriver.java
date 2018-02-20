@@ -208,7 +208,7 @@ public class GameDriver{
     
     doorOdds = (1 + (int)(Math.random() * 10));
     
-    if(doorOdds < 2){
+    if(doorOdds <= 2){
       System.out.println("The door does not open.");
       Thread.sleep(4000);
       System.out.println("There is no handle, or knob, or panel you can see...just the seemingly locked door.");
@@ -227,11 +227,29 @@ public class GameDriver{
       Thread.sleep(5000);
       System.out.println("You hallway has been ripped in half and you have been sucked into the vacum of space.");
       Thread.sleep(3000);
-      System.out.println("End");  
+        
     }
      else{
        System.out.println("The door opens.");
-     }                                        
+       Thread.sleep(3000);
+       System.out.println("The room beyond the door is well lit and a there is some sort of sign on the wall.");
+       Thread.sleep(5000);
+       System.out.println("You step closer to the sign and read 'Escape Pods Ahead.");
+       Thread.sleep(5000);
+       System.out.println("You step closer to the sign and read 'Escape Pods Ahead.");
+       Thread.sleep(5000);
+       
+     }
+    System.out.println("  ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███\n" +  
+                        " ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒\n" +
+                        "▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒\n" +
+                        "░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄\n" +  
+                        "░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒\n" +
+                        " ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░\n" +
+                        "  ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░\n" +
+                        "░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░\n" + 
+                        "       ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░ \n" +    
+                          "                                                     ░                  " );
   }
 public static void printWithDelays(String data, TimeUnit unit, long delay)
         throws InterruptedException {
