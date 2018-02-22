@@ -15,12 +15,14 @@ import java.util.concurrent.TimeUnit;
 public class GameDriver{
   
   //Application starts here
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) throws Exception {  //The throws Exception will allow Thread.sleep() to pause text display
     
     String name = "Bob";
     String city = "Nowhere";
     int age = 0;
-    int doorOdds = 0;
+    int workOutDays = 0;
+    int doorOdds = (1 + (int)(Math.random() * 10));
+    int adrenaline = (1 + (int)(Math.random() * 10));
   
     
     Scanner input = new Scanner(System.in);
@@ -126,6 +128,14 @@ public class GameDriver{
     printWithDelays("\n\"Wow, you look great for someone who is " + age + " years old\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
     
+    printWithDelays("\n\n\"You're doing great, just one more question. How many days a week do you workout?\"\n\n", TimeUnit.MILLISECONDS, 75);
+    Thread.sleep(1500);
+    
+    workOutDays = input.nextInt();
+    
+    printWithDelays("\n\"Hmmm..." + workOutDays + "days a week huh, if you say so\"", TimeUnit.MILLISECONDS, 75);
+    Thread.sleep(1500);
+    
     printWithDelays("\n\n\"Thank you for your cooperation...comparing answers to your stored personal file\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
     
@@ -206,9 +216,9 @@ public class GameDriver{
     System.out.println("You begin running and reach the door.");
     Thread.sleep(7000);
     
-    doorOdds = (1 + (int)(Math.random() * 10));
     
-    if(doorOdds <= 2){
+    
+    if(doorOdds <= 4){
       System.out.println("The door does not open.");
       Thread.sleep(4000);
       System.out.println("There is no handle, or knob, or panel you can see...just the seemingly locked door.");
@@ -225,31 +235,69 @@ public class GameDriver{
       Thread.sleep(7000);
       System.out.println("You hear the loudest explosion yet, then suddenly you hear nothing at all.");
       Thread.sleep(5000);
-      System.out.println("You hallway has been ripped in half and you have been sucked into the vacum of space.");
-      Thread.sleep(3000);
-        
+      System.out.println("The hallway has been ripped in half and you have been sucked out into the vacuum of space.");
+      Thread.sleep(3000);   
+      
     }
-     else{
+    
+    else if (doorOdds > 4 && doorOdds <= 8){
+      System.out.println("The door opens slightly, but not wide enough to move through it.");
+      Thread.sleep(5000);
+      System.out.println("You take a breath and gather all your strength and try to shove open the door.");
+      Thread.sleep(5000);
+      
+      if(adrenaline < 4 && workOutDays <= 2){
+        System.out.println("The door stays the same, you haven't opened it any wider.");
+        Thread.sleep(5000);
+        System.out.println("You try hitting the door, then kicking the door.");
+        Thread.sleep(5000);
+        System.out.println("You try to push it and slide it to one side..then the other.");
+        Thread.sleep(5000);        
+        System.out.println("You try again and again, but the door simply remains closed.");
+        Thread.sleep(5000);
+        System.out.println("You scream and shout and curse at the door...but it does not open.");
+        Thread.sleep(5000);
+        System.out.println("You hear more explosions and the hallway shakes so hard you are thrown to the floor.");
+        Thread.sleep(7000);
+        System.out.println("You hear the loudest explosion yet, then suddenly you hear nothing at all.");
+        Thread.sleep(5000);
+        System.out.println("You hallway has been ripped in half and you have been sucked into the vacum of space.");
+        Thread.sleep(3000);   
+      }
+      
+      else if((adrenaline >= 4 && adrenaline < 9) || (workOutDays > 2 && workOutDays <= 5)){
+        System.out.println("You strain and struggle and nearly pop your fingers out of joint, but the door finally opens and you walk through it.");
+        Thread.sleep(5000);
+        System.out.println("The room beyond the door contains the escape pods you have been looking for.");
+        Thread.sleep(5000);
+        System.out.println("You hop into an escape pod and fly away to safety.");
+        Thread.sleep(5000);
+      }
+      else{
+        System.out.println("You almost tare the door off it's track as you rush into the next room.");
+        Thread.sleep(5000);
+        System.out.println("The room beyond the door contains the escape pods you have been looking for.");
+        Thread.sleep(5000);
+        System.out.println("You hop into an escape pod and fly away to safety.");
+        Thread.sleep(5000);
+      }
+      
+    }
+    else{
        System.out.println("The door opens.");
        Thread.sleep(3000);
        System.out.println("The room beyond the door is well lit and a there is some sort of sign on the wall.");
        Thread.sleep(5000);
        System.out.println("You step closer to the sign and read 'Escape Pods Ahead.");
        Thread.sleep(5000);
-       System.out.println("You step closer to the sign and read 'Escape Pods Ahead.");
+       System.out.println("You hope into an escape pod and fly away to safety.");
        Thread.sleep(5000);
        
      }
-    System.out.println("  ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███\n" +  
-                        " ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒\n" +
-                        "▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒\n" +
-                        "░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄\n" +  
-                        "░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒\n" +
-                        " ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░\n" +
-                        "  ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░\n" +
-                        "░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░\n" + 
-                        "       ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░ \n" +    
-                          "                                                     ░                  " );
+    System.out.println("  ___    __    __  __  ____    _____  _  _  ____  ____ \n" + 
+                       " / __)  /__\\  (  \\/  )( ___)  (  _  )( \\/ )( ___)(  _ \\ \n" +
+                       "( (_-. /(__)\\  )    (  )__)    )(_)(  \\  /  )__)  )   /  \n" +
+                       " \\___/(__)(__)(_/\\/\\_)(____)  (_____)  \\/  (____)(_)\\_)" );
   }
 public static void printWithDelays(String data, TimeUnit unit, long delay)
         throws InterruptedException {
