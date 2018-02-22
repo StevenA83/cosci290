@@ -290,7 +290,7 @@ public class GameDriver{
        Thread.sleep(5000);
        System.out.println("You step closer to the sign and read 'Escape Pods Ahead.");
        Thread.sleep(5000);
-       System.out.println("You hope into an escape pod and fly away to safety.");
+       System.out.println("You hop into an escape pod and fly away to safety.");
        Thread.sleep(5000);
        
      }
