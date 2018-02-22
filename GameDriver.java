@@ -133,7 +133,7 @@ public class GameDriver{
     
     workOutDays = input.nextInt();
     
-    printWithDelays("\n\"Hmmm..." + workOutDays + "days a week huh, if you say so\"", TimeUnit.MILLISECONDS, 75);
+    printWithDelays("\n\"Hmmm... " + workOutDays + " days a week huh, if you say so\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
     
     printWithDelays("\n\n\"Thank you for your cooperation...comparing answers to your stored personal file\"", TimeUnit.MILLISECONDS, 75);
@@ -288,11 +288,11 @@ public class GameDriver{
        Thread.sleep(3000);
        System.out.println("The room beyond the door is well lit and a there is some sort of sign on the wall.");
        Thread.sleep(5000);
-       System.out.println("You step closer to the sign and read 'Escape Pods Ahead.");
+       System.out.println("You step closer to the sign and read 'Escape Pods Ahead'.");
        Thread.sleep(5000);
        System.out.println("You hop into an escape pod and fly away to safety.");
        Thread.sleep(5000);
-       
+      
      }
     System.out.println("  ___    __    __  __  ____    _____  _  _  ____  ____ \n" + 
                        " / __)  /__\\  (  \\/  )( ___)  (  _  )( \\/ )( ___)(  _ \\ \n" +
