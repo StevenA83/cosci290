@@ -27,6 +27,8 @@ public class Lab5{
       
       //Reset "allLetters" boolean value to "true" each time loop is run
       allLetters = true;
+      
+      //Reset "nameLength" boolean value to "false" each time loop is run
       nameLength = false;
       
       //Promt to get user to enter a String
