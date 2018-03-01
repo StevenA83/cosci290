@@ -17,61 +17,70 @@ public class Lab5{
     //initiate the scanner object
     Scanner input = new Scanner(System.in);
     
-    int nameLength = 0;
+    //Set initial conditions for variables
+    boolean nameLength = false;
+    boolean allLetters = true;
+    String name = "";
     
-    while(nameLength < 2) {
+    //Begin "while loop"
+    while(nameLength == false  || allLetters == false) {
       
+      //Reset "allLetters" boolean value to "true" each time loop is run
+      allLetters = true;
+      nameLength = false;
+      
+      //Promt to get user to enter a String
       System.out.println("What is you name?");
     
-      String name = input.next();
+      //Saving user input as variable "name" 
+      name = input.next();
       
-      //chec if name is less than 2 characters
-      if(name.length() < 2){
-      System.out.println("Please enter a name that is at least "
-                       + "two letters long and no numbers");
+      
+      //check if name is less than 2 characters
+      if(name.length() >= 2){
+        
+        //If the nameLength is at least 2 characters the boolean value is switched to true
+        nameLength = true;    
       }
       
-      else{ //name is at least 2 characters
+      else{   
         
-        System.out.println("Nice to meet you " + name);
-        System.out.println("Now lets check to make sure you didn't use any illegal characters");
-       
+        //If nameLength is not at least 2 letters, nothing happens and the boolean value remains false
       }
-        //check of name contains letters
-        
-        //for example, go through each letter in the name "Lo!gan"
-        //name.charAt(0) to look at the character in index 0
-        
-        //use the for-loop because we know how many letters it has
+      
+      //create index of name characters
       for(int index = 0; index < name.length(); index++){
+        
+        //checking each charaters to see if it is a letter
+        if(Character.isLetter(name.charAt(index))){ 
           
-        System.out.println(name.charAt(index));
-          
-          
-          //check if the character is a letter or number
-        if(!Character.isLetter(name.charAt(index))){  //if it's not a letter
-
-          System.out.println("This is an illegal character");
-          
-          System.out.println("Please enter a name that is at least "
-                       + "two letters long and no numbers");
-             
+          //If the character being checked is a letter, nothing happens and "allLetters" boolean value remains "true"                    
         }
-          
+        
+        //If a character in "name" is not a letter, the boolean value for "allLetters" is changed to "false"
         else{
-          System.out.println("This is a letter");
-            
+          allLetters = false;
         }
-          
+       
+      }//end of "for loop" where the characters in "name" are checked if they are letters or not
+      
+      //What to do if either the "nameLength" or the "allLetters" conditions fail
+      if(nameLength == false || allLetters == false){
+        
+        //Telling the user what condtions must be met for a name to be acceptable
+        System.out.println("Invalid entry, please enter a name that is at least 2 charaters long and only contains letters.");
       }
-        nameLength = name.length();
-    }
       
+      //If all conditions are met and a valid name has been entered
+      else{
+        System.out.println("Thank you " + name + " for entering a valid name, have a nice day.");
+      }
       
-      
-  }// end of while loop
+    }//end of while loop
             
-  }
+  }//end of main method
+  
+}//end of program
 
 
   
