@@ -1,0 +1,21 @@
+
+Steven Lemos
+Co Sci 290
+Lab 8
+
+Actual parameter: this is the value passed on from the method that has been envoked. 
+Ambiguous invocation: when there are 2 or more possible matches for the invocation of a method, but the compiler cannot determine the best match and this causes a compile error.
+Argument: an argument is another term for an actual parameter or the value passed on from the method
+Divide and conquer: this is a strategy used when writing a large program to break it down to smaller more managealbe problems.
+Formal parameter: another term for a parameter or a value defined in the method header.
+Informatin hiding: when the use of a method is seperated from implementation, meaning the user can use the method without knowing how it works and the method body is hidden from the user.
+Method: a method is a collection of statements grouped together to perform an operation.
+Method Abstraction: when you seperate a method from it's implementation.  
+Method overloading: defineing methods using the same name as long as thier signatures are different.
+Method signature: the method name and parameter list together make up the method signature.
+Modifier: part of the method header, in chapter 6 all the methods will use the "static" modifier.
+Parameter: variable defined in the method header are known as formal parameters or just parameters.
+Pass-by-value: when a value is invoked by a method, that value is passed to the parameter and is known as a pass-by-value.
+Scope of variable: the part of the program where a variable can be referenced.
+Stepwise refinement: another term for divide and conquer, breaking down a large program into smaller problems.
+Stub: a stub is a simple but incomplete version of a method, often used to build the framework of a program.
