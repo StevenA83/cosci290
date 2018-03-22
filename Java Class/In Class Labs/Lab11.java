@@ -42,7 +42,7 @@ public class Lab11{
     for(int index1 = 0; index1 < n; index1++){
 
       //For loop to generate the lines across
-      for(int index2 = 0; index2 <n; index2++){
+      for(int index2 = 0; index2 < n; index2++){
         
         //create a random number of zero or one
         int randomNumber = 0 + (int)(Math.random() * 2);
