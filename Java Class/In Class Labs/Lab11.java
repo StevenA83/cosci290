@@ -28,7 +28,7 @@ public class Lab11{
     Scanner input = new Scanner(System.in);
 
     //Prompt user to enter a number
-    System.out.println("Please enter in interger to generate a matrix of ones and zeroes");
+    System.out.println("Please enter an interger to generate a matrix of ones and zeroes");
     n = input.nextInt();
 
     //Print out a n-by-n matrix
