@@ -1,0 +1,12 @@
+Steven Lemos
+Co Sci 290
+Documentation.txt
+
+Game Summary:
+  Player is a new employee on a martian mining colony.  As the game begins the facility is rocked by an explosion and beins to fill with poisionous gas,
+  alien mosters and rival colony enemies.  The player must reach an escape pod before it is too late.  Along the way the player must find usefull tools and weapons,
+  battle enemies and solve puzzels to get to safety.  The player will encounter multiple ways to solve problems, including a hacking mini-game.  Gameplay will include
+  features like health meter, combat system, death penalties and respawn safe zones.
+  
+Objects used:
+  Keys, office equipment, weapons, medical packs, upgrades, dispencers, money/credits
