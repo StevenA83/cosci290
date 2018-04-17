@@ -11,12 +11,16 @@
 
 import java.util.Scanner;  //This is a Java object that allows you to take user input
 import java.util.concurrent.TimeUnit;  //This is a Java object that allows for controlling the 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class GameDriver{
   
   //Application starts here
   public static void main(String[] args) throws Exception {  //The throws Exception will allow Thread.sleep() to pause text display
     
+    Utility tool = new Utility();//
     String name = "Bob";
     String city = "Nowhere";
     int age = 0;
@@ -36,26 +40,12 @@ public class GameDriver{
                       "|__|__|  \\_/\\_/  |__|__||__|\\_||_____||__|__|\n");
     
     //The story starts here
-    Thread.sleep(3000);  //Thread.sleep pauses the program before it moves on to the next line
-    System.out.println("\n\n\nYou awaken from what feels like a long deep sleep and find yourself laying down in some sort of light blue bed.");
-    Thread.sleep(5000);
-    
-    System.out.println("However, the bed is not a normal bed.");
-    Thread.sleep(3000);
-    
-    System.out.println("It is emitting a soft glow and is enclosed by a sloping, circular wall.");
-    Thread.sleep(5000);
-    
-    System.out.println("It's almost like the bed is inside a giant egg.");
-    Thread.sleep(5000);
-    
-    System.out.println("A semi transparent screen flickers to life in front of your face and words begins scrolling across it. \n");
-    Thread.sleep(5000);
+    tool.readFile("FirstParagraph.txt");
     
     
     //Scrolling text printing begins here to mimic what reader sees on screen
     //The String text will be displayed letter by letter with a 75 millisecond pause between each letter
-    printWithDelays("\"Bio-Pod emergency start up sequence intitalizing...\"", TimeUnit.MILLISECONDS, 75);  
+   /* printWithDelays("\"Bio-Pod emergency start up sequence intitalizing...\"", TimeUnit.MILLISECONDS, 75);  
     Thread.sleep(1500);
     
     printWithDelays("\n\n\"Calibrating life support systems...\"", TimeUnit.MILLISECONDS, 75);
@@ -109,9 +99,9 @@ public class GameDriver{
     //This is a promt asking the user's first name
     printWithDelays("\n\n\"What is your first name?\"\n\n", TimeUnit.MILLISECONDS, 75); 
     Thread.sleep(1500);
-    
+    */
     //This is where the user enters  for thier first name the program to use
-    name = input.next();  
+    name = input.nextLine();  
     
     printWithDelays("\n\"Hello " + name + " it is a pleasure to meet you\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
@@ -120,7 +110,7 @@ public class GameDriver{
     printWithDelays("\n\n\"What is the name of the city where you were born?\"\n\n", TimeUnit.MILLISECONDS, 75);
        
     //Here the user enters the name of thier birthplace for the program to use
-    city = input.next();  
+    city = input.nextLine();  
     
     printWithDelays("\n\"No kidding, my programmer is from " + city + ", it sure is a small world after all\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
