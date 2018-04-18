@@ -1,0 +1,6 @@
+"This is a ship wide emergency alert, this is not a drill"
+"Please proceed to the nearest emergency escape pod"
+"The 'Starship Lusitania' has been stuck by cometary debris"
+"Shields, engines and main power are offline"
+"FTL drive core temperatures approaching critical levels"
+"Hull breaches detected on levels 14, 15, 16 and 20"

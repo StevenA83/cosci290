@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 
-public class Utility{
+public class SplashUtility{
   /*
     This methond oens a file and prints out each line.
   */
@@ -25,7 +25,6 @@ public class Utility{
       //read each line in the file until the EOF
       while((currentLine = br.readLine()) != null){
         System.out.println(currentLine);
-        Thread.sleep(4000);
         
       } 
      //if there is no file to open, the exception will be caught 

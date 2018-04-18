@@ -1,0 +1,7 @@
+"Bio-Pod emergency start up sequence intitalizing..."
+"Calibrating life support systems..."
+"Monitoring emergency power transfer modules..."
+"Start up sequence complete..."
+"Evaluating user vital signs..."
+"Vital signs holding steady...Initializing user interface"
+

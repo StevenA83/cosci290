@@ -1,0 +1,7 @@
+"Good morning and congratulations!"
+"You have been successfully revived"
+"Thank you for using Life-o-Matic's Cryogenic Bio-Pod Hibernation System"
+"You have been in suspended animation for 1000 years"
+"You may have experienced some 'slight' brain damage during the emergency revival cycle..."
+"Please answer a few questions to determine cerebral functionality"
+"What is your first name?"
