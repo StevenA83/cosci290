@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DelayUtility{
   /*
-    This methond oens a file and prints out each line.
+    This methond opens a file and prints out each line.
   */
   public void readFile(String filename) throws Exception {
     
@@ -33,7 +33,7 @@ public class DelayUtility{
     }catch(IOException e){
       e.printStackTrace();
     }
-  }
+  }//end of Main Method
   
   //part of the program that allows the display of text letter by letter
   public static void printWithDelays(String data, TimeUnit unit, long delay)

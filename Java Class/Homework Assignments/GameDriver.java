@@ -21,8 +21,10 @@ public class GameDriver{
     Utility tool = new Utility();
     SplashUtility tool2 = new SplashUtility();
     DelayUtility tool3 = new DelayUtility();
+    TestWriteFile write = new TestWriteFile();
     String name = "Bob";
     String city = "Nowhere";
+    String decesion = "";
     int age = 0;
     int workOutDays = 0;
     int doorOdds = (1 + (int)(Math.random() * 10));  //This creates a random number between 1 and 10 and assigns it to variable called doorOdds
@@ -30,6 +32,8 @@ public class GameDriver{
   
     
     Scanner input = new Scanner(System.in);
+    
+    
     
     //Splash screen displayed
     tool2.readFile("startSplash.txt");
@@ -50,7 +54,10 @@ public class GameDriver{
     tool3.readFile("ComputerTalk2.txt");
     
     //This is where the user enters  for thier first name the program to use
-    name = input.nextLine();  
+    name = input.nextLine();
+    
+    //Create a txt file with the name of the user stored in it
+    write.writeFile("userName.txt", name);
     
     printWithDelays("\n\"Hello " + name + " it is a pleasure to meet you\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
@@ -100,9 +107,28 @@ public class GameDriver{
     
     //Exiting the pod and entering the room
     tool.readFile("SecondParagraph.txt");
-    
+      
     //Computerized emergency alert message starts here
     tool3.readFile("ComputerizedEmergencyAlert.txt");
+    
+    System.out.println("The voice suddenly cuts out and is replaced by static.");
+    Thread.sleep(2000);
+    
+    System.out.println("The door with the red lights above it slides slowly open.");
+    Thread.sleep(2000);
+    
+    //ask the user if they want to stay in room or leave the room
+    System.out.println("Do you want to STAY in the room or LEAVE the room?");
+    
+    decesion = input.nextLine();
+    
+    if(decesion.equalsIgnoreCase("STAY")){
+      tool.readFile("stayPut.txt");
+      Thread.sleep(2000);
+      tool2.readFile("GameOverSplash.txt");
+      
+    }
+    else{};
     
     //Computer warning finishes and character leaves the room 
     tool.readFile("Hallway.txt");
