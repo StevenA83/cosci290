@@ -66,7 +66,8 @@ public class GameDriver{
     printWithDelays("\n\n\"What is the name of the city where you were born?\"\n\n", TimeUnit.MILLISECONDS, 75);
        
     //Here the user enters the name of thier birthplace for the program to use
-    city = input.nextLine();  
+    city = input.nextLine();
+    write.writeFile("userCity.txt", city);
     
     printWithDelays("\n\"No kidding, my programmer is from " + city + ", it sure is a small world after all\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
@@ -75,7 +76,7 @@ public class GameDriver{
     printWithDelays("\n\n\"Now, how old are you?\"\n\n", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
     
-    age = input.nextInt();  
+    age = input.nextInt();
     
     printWithDelays("\n\"Wow, you look great for someone who is " + age + " years old\"", TimeUnit.MILLISECONDS, 75);
     Thread.sleep(1500);
@@ -118,7 +119,7 @@ public class GameDriver{
     Thread.sleep(2000);
     
     //ask the user if they want to stay in room or leave the room
-    System.out.println("Do you want to STAY in the room or LEAVE the room?");
+    /*System.out.println("Do you want to STAY in the room or LEAVE the room?");
     
     decesion = input.nextLine();
     
@@ -126,10 +127,10 @@ public class GameDriver{
       tool.readFile("stayPut.txt");
       Thread.sleep(2000);
       tool2.readFile("GameOverSplash.txt");
-      
+      System.exit(1); 
     }
     else{};
-    
+    */
     //Computer warning finishes and character leaves the room 
     tool.readFile("Hallway.txt");
     
