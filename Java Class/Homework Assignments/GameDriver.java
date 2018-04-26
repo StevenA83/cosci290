@@ -18,10 +18,11 @@ public class GameDriver{
   //Main Method starts here
   public static void main(String[]args) throws Exception {  //The throws Exception will allow Thread.sleep() to pause text display
     
-    Utility tool = new Utility();
-    SplashUtility tool2 = new SplashUtility();
-    DelayUtility tool3 = new DelayUtility();
+    Utility read = new Utility();
+    SplashUtility splash = new SplashUtility();
+    DelayUtility readDelay = new DelayUtility();
     TestWriteFile write = new TestWriteFile();
+    Lab15MultiDimensionalArray map = new Lab15MultiDimensionalArray();
     String name = "Bob";
     String city = "Nowhere";
     String decesion = "";
@@ -36,22 +37,22 @@ public class GameDriver{
     
     
     //Splash screen displayed
-    tool2.readFile("startSplash.txt");
+    splash.readFile("startSplash.txt");
     Thread.sleep(3000);
     
     //The story starts here
-    tool.readFile("FirstParagraph.txt");
+    read.readFile("FirstParagraph.txt");
     
     //Scrolling text printing begins here to mimic what reader sees on screen
     //The String text will be displayed letter by letter with a 75 millisecond pause between each letter
-    tool3.readFile("ComputerTalk1.txt");
+    readDelay.readFile("ComputerTalk1.txt");
     
     System.out.print("You hear a crackling noise and a computerized voice speaks.\n\n");
     Thread.sleep(5000);
     
     
     //Computer voice is displayed as text that is displayed letter by letter 
-    tool3.readFile("ComputerTalk2.txt");
+    readDelay.readFile("ComputerTalk2.txt");
     
     //This is where the user enters  for thier first name the program to use
     name = input.nextLine();
@@ -107,10 +108,10 @@ public class GameDriver{
     
     
     //Exiting the pod and entering the room
-    tool.readFile("SecondParagraph.txt");
+    read.readFile("SecondParagraph.txt");
       
     //Computerized emergency alert message starts here
-    tool3.readFile("ComputerizedEmergencyAlert.txt");
+    readDelay.readFile("ComputerizedEmergencyAlert.txt");
     
     System.out.println("The voice suddenly cuts out and is replaced by static.");
     Thread.sleep(2000);
@@ -124,15 +125,17 @@ public class GameDriver{
     decesion = input.nextLine();
     
     if(decesion.equalsIgnoreCase("STAY")){
-      tool.readFile("stayPut.txt");
+      read.readFile("stayPut.txt");
       Thread.sleep(2000);
-      tool2.readFile("GameOverSplash.txt");
+      splash.readFile("GameOverSplash.txt");
       System.exit(1); 
     }
     else{};
     */
     //Computer warning finishes and character leaves the room 
-    tool.readFile("Hallway.txt");
+    read.readFile("Hallway.txt");
+    
+    map;
     
     
     //if - else if - else statement that determines if the emergency escape door opens or not
@@ -215,7 +218,7 @@ public class GameDriver{
      }
     
     //Game over screen
-    tool2.readFile("GameOverSplash.txt");
+    splash.readFile("GameOverSplash.txt");
   }//end of Main Method
   
   //part of the program that allows the display of text letter by letter
