@@ -42,7 +42,7 @@ public class Lab20{
     
     for(int i = 0; i < array.length; i++){
       for(int j = 0; j < array[i].length; j++){
-       sums = sums + array[i][j] + " ";
+       sums[i] = sums + array[i][j];
       }
     }
     return sums;
