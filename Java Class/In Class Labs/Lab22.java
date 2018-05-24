@@ -127,7 +127,7 @@ public class Lab22{
         return true;
       }//end of if statement checking rows for 4 in a row
       //check diagonals from top-left to bottom-right for 4 in a row
-      else if(board[2][0] != ' ' && board[2][0] == board[1][3] && board[2][0] == board[2][4] && board[2][0] == board[3][5] ||
+      else if(board[2][0] != ' ' && board[2][0] == board[3][1] && board[2][0] == board[4][2] && board[2][0] == board[5][3] ||
               board[1][0] != ' ' && board[1][0] == board[2][1] && board[1][0] == board[3][2] && board[1][0] == board[4][3] ||
               board[2][1] != ' ' && board[2][1] == board[3][2] && board[2][1] == board[4][3] && board[2][1] == board[5][4] ||
               board[0][0] != ' ' && board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] == board[3][3] ||
