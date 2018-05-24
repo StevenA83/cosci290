@@ -61,20 +61,20 @@ public class Lab22{
       System.out.print("| ");
       for(int j = 0; j < 6; j++){
         System.out.print(board[i][j] + " | ");
-      }//end of for(int = j) loop
+      }//end of for(int i = 0; i < 6; i++) loop
       System.out.println();
       System.out.println("-------------------------");
-    }//end of for(int = i) loop
-  }//end of printBoard
+    }//end of for(int j = 0; j < 6; j++) loop
+  }//end of printBoard funciton
   
   public static void changeXO(){
     if(xo == 'x'){
         xo = 'o';
-    }//end of if statement
+    }//end of if(xo == 'x') statement
     else{
         xo = 'x';
     }//end of else statement
-  }//end of changeXO
+  }//end of changeXO function
   
   /*
     If there isn't already an x or o in that row and col
@@ -116,7 +116,7 @@ public class Lab22{
         changeXO();
         System.out.println("Congradulations! " + xo + " is the winner!\n");
         return true;
-      }
+      }//end of if statement checking up and down colums for 4 in a row
       //check across the rows for 4 in a row
       else if(board[i][0] != ' ' && board[i][0] == board[i][1] && board[i][0] == board[i][2] && board[i][0] == board [i][3] ||
               board[i][1] != ' ' && board[i][1] == board[i][2] && board[i][1] == board[i][3] && board[i][1] == board [i][4] ||
@@ -125,7 +125,7 @@ public class Lab22{
         changeXO();
         System.out.println("Congradulations! " + xo + " is the winner!\n");
         return true;
-      }
+      }//end of if statement checking rows for 4 in a row
       //check diagonals from top-left to bottom-right for 4 in a row
       else if(board[2][0] != ' ' && board[2][0] == board[1][3] && board[2][0] == board[2][4] && board[2][0] == board[3][5] ||
               board[1][0] != ' ' && board[1][0] == board[2][1] && board[1][0] == board[3][2] && board[1][0] == board[4][3] ||
@@ -140,7 +140,7 @@ public class Lab22{
         changeXO();
         System.out.println("Congradulations! " + xo + " is the winner!\n");
         return true;
-      }
+      }//end of if statement checking diagonals from top-left to bottom-right for 4 in a row
       //check diagonals from bottom-left to top-right for 4 in a row
       else if(board[3][0] != ' ' && board[3][0] == board[2][1] && board [3][0] == board[1][2] && board [3][0] == board[0][3] ||
               board[4][0] != ' ' && board[4][0] == board[3][1] && board [4][0] == board[2][2] && board [4][0] == board[1][3] ||
@@ -155,7 +155,7 @@ public class Lab22{
         changeXO();
         System.out.println("Congradulations! " + xo + " is the winner!\n");
         return true;
-      }
+      }//end of if statement checking diagonals from bottom-left to top-right for 4 in a row
       //check to see if all spaces have been played
       for(int j = 0; j < 6; j++){
         if(board[i][j] != ' '){
@@ -166,12 +166,12 @@ public class Lab22{
             System.out.println("There are no more moves left, the game is a draw.\n");
             return true;
                
-          }
-        }
-      }
+          }//end of if(counter > 35) statement
+        }//end of if(board[i][j] != ' ') statement
+      }//end of for(int j = 0; j < 6; j++) loop
      
         
-    }
+    }//end of for(int i = 0; i < 6; i++) loop
     return false;
     
   }//end of checkWinner
