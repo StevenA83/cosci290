@@ -156,9 +156,11 @@ public class Lab22{
         System.out.println("Congradulations! " + xo + " is the winner!\n");
         return true;
       }
+      //check to see if all spaces have been played
       for(int j = 0; j < 6; j++){
         if(board[i][j] != ' '){
           counter++;
+          //if all spaces played and no winner the game is a draw
           if(counter > 35){
             printBoard();
             System.out.println("There are no more moves left, the game is a draw.\n");
