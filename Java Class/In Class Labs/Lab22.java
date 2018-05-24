@@ -149,7 +149,7 @@ public class Lab22{
               board[4][1] != ' ' && board[4][1] == board[3][2] && board [4][1] == board[2][3] && board [4][1] == board[1][4] ||
               board[3][2] != ' ' && board[3][2] == board[2][3] && board [3][2] == board[1][4] && board [3][2] == board[0][5] ||
               board[5][1] != ' ' && board[5][1] == board[4][2] && board [5][1] == board[3][3] && board [5][1] == board[2][4] ||
-              board[4][2] != ' ' && board[4][2] == board[3][3] && board [4][2] == board[2][4] && board [4][2] == board[2][5] ||
+              board[4][2] != ' ' && board[4][2] == board[3][3] && board [4][2] == board[2][4] && board [4][2] == board[1][5] ||
               board[5][2] != ' ' && board[5][2] == board[4][3] && board [5][2] == board[3][4] && board [5][2] == board[2][5]){
         printBoard();
         changeXO();
