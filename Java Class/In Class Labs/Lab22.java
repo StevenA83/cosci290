@@ -108,6 +108,7 @@ public class Lab22{
   public static boolean checkWinner(){
     int counter = 0;
     for(int i = 0; i < 6; i++){
+      //check up and down the colums for 4 in a row
       if(board[0][i] != ' ' && board[0][i] == board[1][i] && board[0][i] == board [2][i] && board[0][i] == board[3][i] ||
          board[1][i] != ' ' && board[1][i] == board[2][i] && board[1][i] == board [3][i] && board[1][i] == board[4][i] ||
          board[2][i] != ' ' && board[2][i] == board[3][i] && board[2][i] == board [4][i] && board[2][i] == board[5][i]){
@@ -116,19 +117,40 @@ public class Lab22{
         System.out.println("Congradulations! " + xo + " is the winner!\n");
         return true;
       }
-      else if(board[i][0] != ' ' && board[i][0] == board[i][1] && board[i][0] == board[i][2]){
+      //check across the rows for 4 in a row
+      else if(board[i][0] != ' ' && board[i][0] == board[i][1] && board[i][0] == board[i][2] && board[i][0] == board [i][3] ||
+              board[i][1] != ' ' && board[i][1] == board[i][2] && board[i][1] == board[i][3] && board[i][1] == board [i][4] ||
+              board[i][2] != ' ' && board[i][2] == board[i][3] && board[i][2] == board[i][4] && board[i][2] == board [i][5]){
         printBoard();
         changeXO();
         System.out.println("Congradulations! " + xo + " is the winner!\n");
         return true;
       }
-      else if(board[0][0] != ' ' && board[0][0] == board[1][1] && board[0][0] == board[2][2]){
+      //check diagonals from top-left to bottom-right for 4 in a row
+      else if(board[2][0] != ' ' && board[2][0] == board[1][3] && board[2][0] == board[2][4] && board[2][0] == board[3][5] ||
+              board[1][0] != ' ' && board[1][0] == board[2][1] && board[1][0] == board[3][2] && board[1][0] == board[4][3] ||
+              board[2][1] != ' ' && board[2][1] == board[3][2] && board[2][1] == board[4][3] && board[2][1] == board[5][4] ||
+              board[0][0] != ' ' && board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] == board[3][3] ||
+              board[1][1] != ' ' && board[1][1] == board[2][2] && board[1][1] == board[3][3] && board[1][1] == board[4][4] ||
+              board[2][2] != ' ' && board[2][2] == board[3][3] && board[2][2] == board[4][4] && board[2][2] == board[5][5] ||
+              board[0][1] != ' ' && board[0][1] == board[1][2] && board[0][1] == board[2][3] && board[0][1] == board[3][4] ||
+              board[1][2] != ' ' && board[1][2] == board[2][3] && board[1][2] == board[3][4] && board[1][2] == board[4][5] ||
+              board[0][2] != ' ' && board[0][2] == board[1][3] && board[0][2] == board[2][4] && board[0][2] == board[3][5]){
         printBoard();
         changeXO();
         System.out.println("Congradulations! " + xo + " is the winner!\n");
         return true;
       }
-      else if(board[0][2] != ' ' && board[0][2] == board[1][1] && board [0][2] == board[2][0]){
+      //check diagonals from bottom-left to top-right for 4 in a row
+      else if(board[3][0] != ' ' && board[3][0] == board[2][1] && board [3][0] == board[1][2] && board [3][0] == board[0][3] ||
+              board[4][0] != ' ' && board[4][0] == board[3][1] && board [4][0] == board[2][2] && board [4][0] == board[1][3] ||
+              board[3][1] != ' ' && board[3][1] == board[2][2] && board [3][1] == board[1][3] && board [4][0] == board[0][4] ||
+              board[5][0] != ' ' && board[5][0] == board[4][1] && board [5][0] == board[3][2] && board [5][0] == board[2][3] ||
+              board[4][1] != ' ' && board[4][1] == board[3][2] && board [4][1] == board[2][3] && board [4][1] == board[1][4] ||
+              board[3][2] != ' ' && board[3][2] == board[2][3] && board [3][2] == board[1][4] && board [3][2] == board[0][5] ||
+              board[5][1] != ' ' && board[5][1] == board[4][2] && board [5][1] == board[3][3] && board [5][1] == board[2][4] ||
+              board[4][2] != ' ' && board[4][2] == board[3][3] && board [4][2] == board[2][4] && board [4][2] == board[2][5] ||
+              board[5][2] != ' ' && board[5][2] == board[4][3] && board [5][2] == board[3][4] && board [5][2] == board[2][5]){
         printBoard();
         changeXO();
         System.out.println("Congradulations! " + xo + " is the winner!\n");
